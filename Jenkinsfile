@@ -25,9 +25,7 @@ pipeline {
         // trigger portainer redeploy
         // separated out so this only gets run if the ansible playbook doesn't fail
         stage('redeploy portainer stack (DEV)') {
-            when { 
-                expression { env.BRANCH_NAME == 'dev_test' } 
-            }
+            when { branch 'dev_test' }
             steps {
                 // deploy configs to DEV
                 echo 'Redeploy DEV stack'
