@@ -3,7 +3,7 @@
 version: "3.8"
 services:
   tautulli:
-    image: tautulli/tautulli:v2.13.4
+    image: tautulli/tautulli:v2.16.0
     container_name: tautulli
     environment:
       - PUID=1000
